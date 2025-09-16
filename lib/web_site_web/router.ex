@@ -18,6 +18,7 @@ defmodule WebSiteWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/about_me", AboutMeController, :about_me
   end
 
   # Other scopes may use custom stacks.

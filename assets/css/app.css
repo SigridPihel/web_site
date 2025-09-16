@@ -3,3 +3,17 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+
+/* About Me */
+
+  .about_me h1 {
+    @apply text-xl font-bold italic;
+  }
+
+  .about_me p {
+    @apply mt-4;
+  }
+
+  .about_me ol {
+    @apply list-disc list-inside space-y-2 mt-4;
+  }

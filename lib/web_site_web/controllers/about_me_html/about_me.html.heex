@@ -1,0 +1,14 @@
+
+<div class="about_me">
+  <h1>My hobbies</h1>
+  <p>
+    {@emojis}
+  </p>
+  <ol>
+    <%= for hobby <- @hobbies do %>
+        <li>
+            {hobby.text}
+        </li>
+    <% end %>
+  </ol>
+</div>
