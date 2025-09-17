@@ -3,11 +3,17 @@ defmodule WebSiteWeb.AboutMeController do
 
   alias WebSite.Hobbies
 
-  def about_me(conn, _params) do
+  def index(conn, _params) do
     hobbies = Hobbies.list_hobbies()
 
     emojis = ~w(🩷 🌸 🎀) |> Enum.random() |> String.duplicate(5)
 
-    render(conn, hobbies: hobbies, emojis: emojis)
+    render(conn, :index, hobbies: hobbies, emojis: emojis)
+  end
+
+  def show(conn, %{"id" => id}) do
+    hobby = Hobbies.get_hobby(id)
+
+    render(conn, :show, hobby: hobby)
   end
 end

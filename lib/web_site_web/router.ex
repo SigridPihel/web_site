@@ -8,17 +8,27 @@ defmodule WebSiteWeb.Router do
     plug :put_root_layout, html: {WebSiteWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :emoji
   end
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
+  def emoji(conn, _opts) do
+    emoji = ["🫶", "😻", "🫀"] |> Enum.random()
+
+    conn = assign(conn, :emoji, emoji)
+
+    conn
+  end
+
   scope "/", WebSiteWeb do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/about_me", AboutMeController, :about_me
+    get "/about_me", AboutMeController, :index
+    get "/about_me/:id", AboutMeController, :show
   end
 
   # Other scopes may use custom stacks.

@@ -7,7 +7,9 @@
   <ol>
     <%= for hobby <- @hobbies do %>
         <li>
+          <a href={~p"/about_me/#{hobby.id}"}>
             {hobby.text}
+          </a>
         </li>
     <% end %>
   </ol>
