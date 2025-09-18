@@ -29,6 +29,7 @@ defmodule WebSiteWeb.Router do
     get "/", PageController, :home
     get "/about_me", AboutMeController, :index
     get "/about_me/:id", AboutMeController, :show
+    live "/teaching_effort", TeachingEffortLive
   end
 
   # Other scopes may use custom stacks.

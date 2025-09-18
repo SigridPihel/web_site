@@ -17,3 +17,13 @@
   .about_me ol {
     @apply list-disc list-inside space-y-2 mt-4;
   }
+
+  /* TeachingEffortLive */
+
+  .teaching_effort h1 {
+    @apply text-4xl font-extrabold text-center mb-8;
+  }
+
+  .teaching_effort section {
+    @apply flex justify-center gap-x-8 text-3xl;
+  }

@@ -11,7 +11,7 @@ defmodule WebSite.Hobbies do
       },
       %{
         id: 3,
-        text: "Building my business 👩‍💻"
+        text: "Learning and studying 👩‍💻"
       }
     ]
   end
