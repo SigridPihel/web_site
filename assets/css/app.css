@@ -31,3 +31,15 @@
   .studying_effort button {
     @apply size-16 bg-rose-500 text-white rounded-xl hover:bg-rose-700 active:bg-rose-900 text-3xl;
   }
+
+  .studying_effort form {
+    @apply mt-8 text-center text-2xl;
+  }
+
+  .studying_effort form label {
+    @apply text-xl text-gray-600;;
+  }
+
+  .studying_effort form input {
+    @apply text-xl w-20  rounded-lg text-gray-900 focus:ring-1 focus:border-rose-600;
+  }  
