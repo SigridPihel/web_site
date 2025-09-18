@@ -20,10 +20,14 @@
 
   /* TeachingEffortLive */
 
-  .teaching_effort h1 {
+  .studying_effort h1 {
     @apply text-4xl font-extrabold text-center mb-8;
   }
 
-  .teaching_effort section {
-    @apply flex justify-center gap-x-8 text-3xl;
+  .studying_effort section {
+    @apply flex justify-center items-center gap-x-8 text-3xl;
+  }
+
+  .studying_effort button {
+    @apply size-16 bg-rose-500 text-white rounded-xl hover:bg-rose-700 active:bg-rose-900 text-3xl;
   }

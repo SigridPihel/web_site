@@ -1,31 +1,39 @@
-defmodule WebSiteWeb.TeachingEffortLive do
+defmodule WebSiteWeb.StudyingEffortLive do
   use WebSiteWeb, :live_view
 
   def mount(_params, _session, socket) do
-    # students count = 52
-    socket = assign(socket, students_count: 52, teaching_hours: 90)
+    socket = assign(socket, eap_count: 1, studying_hours: 26)
 
     {:ok, socket}
   end
 
   def render(assigns) do
     ~H"""
-    <div class="teaching_effort">
-      <h1>Teaching Effort Calculator 🧮</h1>
+    <div class="studying_effort">
+      <h1>📚 Studying Effort Calculator 🧮</h1>
       <section>
+        <button phx-click="add" phx-value-quantity="1">
+          +
+        </button>
         <div>
-          {@students_count}
+          {@eap_count}
         </div>
         &times;
         <div>
-          {@teaching_hours}
+          {@studying_hours}
         </div>
         =
         <div>
-          {@students_count * @teaching_hours}
+          {@eap_count * @studying_hours}
         </div>
       </section>
     </div>
     """
+  end
+
+  def handle_event("add", %{"quantity" => quantity}, socket) do
+    socket = update(socket, :eap_count, &(&1 + String.to_integer(quantity)))
+
+    {:noreply, socket}
   end
 end
