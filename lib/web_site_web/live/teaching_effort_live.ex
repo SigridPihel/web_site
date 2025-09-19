@@ -15,6 +15,9 @@ defmodule WebSiteWeb.StudyingEffortLive do
         <button phx-click="add" phx-value-quantity="1">
           +
         </button>
+        <button phx-click="subtract" phx-value-quantity="1">
+          -
+        </button>
         <div>
           ({@eap_count}
         </div>
@@ -28,7 +31,7 @@ defmodule WebSiteWeb.StudyingEffortLive do
         </div>
         =
         <div>
-          {@eap_count * @studying_hours / @weeks}
+          {Float.round(@eap_count * @studying_hours / @weeks, 2)}
         </div>
       </section>
       <form phx-submit="set-studying-hrs-per-week">
@@ -41,6 +44,12 @@ defmodule WebSiteWeb.StudyingEffortLive do
 
   def handle_event("add", %{"quantity" => quantity}, socket) do
     socket = update(socket, :eap_count, &(&1 + String.to_integer(quantity)))
+
+    {:noreply, socket}
+  end
+
+  def handle_event("subtract", %{"quantity" => quantity}, socket) do
+    socket = update(socket, :eap_count, &(max(&1 - String.to_integer(quantity), 1)))
 
     {:noreply, socket}
   end
