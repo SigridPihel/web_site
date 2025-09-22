@@ -77,7 +77,7 @@
   }
 
   .course-index .courses .card .details .eap {
-    @apply text-sm text-gray-600 bg-teal-100 rounded-md px-2 py-1;
+    @apply text-sm text-gray-600 bg-emerald-100 rounded-md px-2 py-1;
   }
 
 
