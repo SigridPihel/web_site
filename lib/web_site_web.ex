@@ -86,6 +86,7 @@ defmodule WebSiteWeb do
       # Core UI components and translation
       import WebSiteWeb.CoreComponents
       import WebSiteWeb.Gettext
+      import WebSiteWeb.CustomComponents
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
