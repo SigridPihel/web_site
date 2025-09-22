@@ -44,10 +44,46 @@
     @apply text-xl w-20  rounded-lg text-gray-900 focus:ring-1 focus:border-rose-600;
   } 
 
+  /* TimeTrackerLive */
+
   .time_tracker h1 {
     @apply text-3xl font-bold text-center mb-8 text-red-900;
   }
 
   .time_tracker div {
-    @apply flex justify-center items-center text-3xl text-gray-600;
+    @apply flex justify-center text-3xl text-gray-600;
   }
+
+  /* CourseLive.Index */
+
+  .course-index .courses {
+    @apply mt-6 grid grid-cols-2 md:grid-cols-3 gap-6;
+  }
+ 
+  .course-index .courses .card {
+    @apply bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 pb-4;
+  }
+
+  .course-index .courses .card img {
+    @apply p-4 pb-0 w-4/6 mx-auto object-cover hover:scale-105 transition duration-300 grayscale;
+  }
+
+  .course-index .courses .card h2 {
+    @apply px-4 mt-2 text-center text-teal-600 font-semibold truncate;
+  }
+
+  .course-index .courses .card .details {
+    @apply px-6 mt-4 flex items-center justify-between;
+  }
+
+  .course-index .courses .card .details .eap {
+    @apply text-sm text-gray-600 bg-teal-100 rounded-md px-2 py-1;
+  }
+
+
+  /* Components and Utilities */
+
+  .badge {
+    @apply rounded-md px-2 py-1 text-xs font-medium uppercase inline-block border text-lime-600 border-lime-600;
+  }
+
