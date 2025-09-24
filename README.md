@@ -1,18 +1,7 @@
-# WebSite
+🎓 University Study Companion 🎓
 
-To start your Phoenix server:
+Description: 
+A web-based helper tool designed for university students to manage their academic workload more effectively. The platform features a study effort calculator that estimates the number of study hours required per EAP (European Credit Point), helping students plan their time based on course load. Users can list and organize their courses, view detailed information about each one, and track total study hours across multiple subjects. Additionally, the platform includes a personal blog space where students can reflect on their learning journey, share tips, and document progress.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Purpose: 
+To empower students with better time management, academic clarity, and personal expression—making university life more structured and less overwhelming.
